@@ -38,3 +38,14 @@
   --label-medium: 700 1.25rem / 150% var(--font-roboto-flex);
   --label-small: 700 1rem / 150% var(--font-roboto-flex);
 }
+
+body {
+  background-color: var(--background-primary);
+  background-image: linear-gradient(to bottom, var(--background-primary) 40%, transparent), url("../assets/images/background.png");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  font: var(--paragraph-medium);
+  color: var(--content-primary);
+}
