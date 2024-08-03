@@ -35,6 +35,7 @@ main {
 
 @media (width >= 80em) {
   main {
+    padding: 2.75rem 8.375rem;
     display: grid;
     column-gap: 6.5rem;
     grid-template-areas: 

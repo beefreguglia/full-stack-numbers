@@ -6,7 +6,7 @@ header.top {
 }
 
 @media (width >= 80em) {
-  header {
+  header.top {
     padding: 4.875rem 7.75rem;
     justify-content: flex-start;
   }

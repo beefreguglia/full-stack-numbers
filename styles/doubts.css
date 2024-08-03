@@ -1,0 +1,30 @@
+#doubts {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.25rem;
+
+  .item {
+    display: flex;
+    gap: .5rem;
+    align-items: flex-start;
+
+    & span {
+      color: var(--content-brand);
+      font: var(--paragraph-medium);
+    }
+
+    & p {
+      color: var(--content-secondary);
+      font: var(--paragraph-small);
+    }
+  }
+}
+
+@media (width >= 80em) {
+  #doubts {
+    margin-top: 2.375rem;
+    max-width: 22.375rem;
+  }
+}
