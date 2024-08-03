@@ -28,24 +28,24 @@
   --font-roboto-mono: "Roboto Mono", monospace;
   --font-roboto-flex: "Roboto Flex", sans-serif;
 
-  --display-large: 800 4.5rem / 130% var(--font-sora) uppercase;
-  --display-medium: 800 2.5rem / 130% var(--font-sora) uppercase;
-  --display-small: 700 2rem / 130% var(--font-sora) uppercase;
-  --overline: 700 1rem / 150% var(--font-roboto-mono) uppercase;
+  --display-large: 800 4.5rem / 130% var(--font-sora);
+  --display-medium: 800 2.5rem / 130% var(--font-sora);
+  --display-small: 700 2rem / 130% var(--font-sora);
+  --overline: 700 1rem / 150% var(--font-roboto-mono);
   --paragraph-large: 500 1rem / 150% var(--font-roboto-flex);
-  --paragraph-medium: 500 0.875rem / 150% var(--font-roboto-flex);
-  --paragraph-small: 500 0.75rem / 150% var(--font-roboto-flex);
+  --paragraph-medium: 500 .875rem / 150% var(--font-roboto-flex);
+  --paragraph-small: 500 .75rem / 150% var(--font-roboto-flex);
   --label-medium: 700 1.25rem / 150% var(--font-roboto-flex);
   --label-small: 700 1rem / 150% var(--font-roboto-flex);
 }
 
 body {
   background-color: var(--background-primary);
-  background-image: linear-gradient(to bottom, var(--background-primary) 40%, transparent), url("../assets/images/background.png");
+  background-image: linear-gradient(to bottom,rgba(0, 0, 0) 60%,  transparent), url("../assets/images/background.png");
   background-size: cover;
   background-position: center;
   width: 100vw;
   height: 100vh;
-  font: var(--paragraph-medium);
-  color: var(--content-primary);
+  font: var(--paragraph-large);
+  color: var(--content-tertiary);
 }

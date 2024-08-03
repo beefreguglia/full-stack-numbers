@@ -1,6 +1,13 @@
-header {
+header.top {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 3rem;
+}
+
+@media (width >= 80em) {
+  header {
+    padding: 4.875rem 7.75rem;
+    justify-content: flex-start;
+  }
 }
