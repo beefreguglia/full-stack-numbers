@@ -1,0 +1,31 @@
+form {
+  & > fieldset {
+    border: none;
+
+    & legend {
+      font: var(--label-medium);
+      color: var(--content-primary);
+      text-transform: uppercase;
+    }
+
+    & p {
+      margin-top: .125rem;
+      color: var(--content-secondary);
+    }
+
+    & .inputs {
+      width: 100%;
+      margin-top: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    } 
+
+    & .input-wrapper {
+      width: 5.375rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+}

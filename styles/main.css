@@ -24,8 +24,6 @@ main {
 
   & h2 {
     margin-top: 2.625rem;
-    font: var(--label-medium);
-    color: var(--content-primary);
   }
 
   & p {
@@ -37,7 +35,8 @@ main {
   main {
     padding: 2.75rem 8.375rem;
     display: grid;
-    column-gap: 6.5rem;
+    column-gap: 4rem;
+    grid-template-columns: 1fr 26rem;
     grid-template-areas: 
       'header form'
       'doubts form';
