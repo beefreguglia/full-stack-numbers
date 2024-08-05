@@ -11,9 +11,11 @@
 
   &:hover, &:focus {
     animation: border-linear-transition 2s forwards;
-
-    & > img[src*="arrow"] {
-      animation: translate-right 2s backwards;
+    
+    & > button {
+      & > img[src*="arrow"] {
+        animation: translate-right 2s backwards;
+      }
     }
   }
 }

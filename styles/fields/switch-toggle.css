@@ -1,0 +1,57 @@
+.switch-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-top: 1.25rem;
+
+  &::after {
+    content: "Repetir número";
+    display: block;
+    color: var(--content-primary);
+    font: var(--paragraph-small);
+  }
+}
+
+.switch-toggle-wrapper:has(input:checked) {
+  &::after {
+    content: "Não repetir número";
+  }
+}
+
+.switch-toggle-inner {
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 1.875rem;
+  height: 1.25rem;
+  background-color: var(--background-secondary);
+  border: 2px solid transparent;
+  outline: 1px solid var(--background-secondary);
+  cursor: pointer;
+
+  & input {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  & .slider {
+    width: .875rem;
+    height: .875rem;
+    background-color: var(--content-primary);
+    border-radius: 9999px;
+  }
+}
+
+.switch-toggle-inner:has(input:checked) {
+  background: linear-gradient(91deg, #D586E0 0%, #91A1FA 98.93%);
+  justify-content: flex-end;
+
+  & .slider {
+    background-color: #FFFFFF;
+  }
+}
