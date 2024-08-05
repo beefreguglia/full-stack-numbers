@@ -1,0 +1,98 @@
+.btn {
+  margin-top: 2.5rem;
+  font: var(--label-medium);
+  padding: 2px;
+  display: inline-block;
+  border-radius: .5rem;
+  outline: none;
+  color: var(--content-primary);
+  width: 100%;
+  background: var(--background-secondary);
+
+  &:hover, &:focus {
+    animation: border-linear-transition 2s forwards;
+
+    & > img[src*="arrow"] {
+      animation: translate-right 2s backwards;
+    }
+  }
+}
+
+button {
+  appearance: none;
+  border-radius: inherit;
+  margin: 0;
+  text-align: center;
+  border: none;
+  color: var(--content-primary);
+  outline: none;
+  background: var(--background-secondary);
+  z-index: 1;
+  padding: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  cursor: pointer;
+
+  & img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@keyframes border-linear-transition {
+  0% {
+    background: linear-gradient(0deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  10% {
+    background: linear-gradient(10deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  15% {
+    background: linear-gradient(20deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  20% {
+    background: linear-gradient(30deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  25% {
+    background: linear-gradient(40deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  30% {
+    background: linear-gradient(50deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  35% {
+    background: linear-gradient(60deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  40% {
+    background: linear-gradient(70deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  45% {
+    background: linear-gradient(80deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  50% {
+    background: linear-gradient(90deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  60% {
+    background: linear-gradient(100deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  70% {
+    background: linear-gradient(160deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  80% {
+    background: linear-gradient(180deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  90% {
+    background: linear-gradient(240deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  100% {
+    background: linear-gradient(270deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+}
+
+@keyframes translate-right {
+  50% {
+    transform: translateX(.5rem);
+  }
+}

@@ -41,7 +41,7 @@
 
 body {
   background-color: var(--background-primary);
-  background-image: linear-gradient(to bottom,rgba(0, 0, 0) 60%,  transparent), url("../assets/images/background.png");
+  background-image: linear-gradient(to bottom,rgba(0, 0, 0) 30%,  transparent 300%), url("../assets/images/background.png");
   background-size: cover;
   background-position: center;
   width: 100vw;

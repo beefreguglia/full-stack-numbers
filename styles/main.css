@@ -1,5 +1,7 @@
 main {
   display: grid;
+  max-width: 80rem;
+  margin-inline: auto;
   grid-template-areas: 
     'header'
     'form'
