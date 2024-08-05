@@ -54,6 +54,12 @@ input:focus {
   opacity: .5;
 }
 
+.input-wrapper:has(input:hover), .input-wrapper:has(input:focus) {
+  & label {
+    color: var(--content-brand);
+  }
+}
+
 input {
   &[disabled] {
     background: var(--surface-disabled);
