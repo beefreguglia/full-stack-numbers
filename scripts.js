@@ -24,7 +24,7 @@ form.onsubmit = (event) => {
   const numbersValue = Number(numbers.value);
   const fromValue = Number(from.value);
   const toValue = Number(to.value);
-  const repeatIsChecked = repeat.checked;
+  const repeatIsChecked = !repeat.checked;
   const sortedNumbers = [];
 
   if (isNaN(numbersValue) || isNaN(fromValue) || isNaN(toValue) || numbersValue === 0 || fromValue === 0 || toValue === 0 || fromValue > toValue) {
@@ -33,6 +33,33 @@ form.onsubmit = (event) => {
   }
 
   handleSortNumbers(numbersValue, fromValue, toValue, sortedNumbers, repeatIsChecked);
+
+  form.innerHTML = "";
+  form.classList.add("center");
+  const fieldset = document.createElement("fieldset");
+  const legend = document.createElement("legend");
+  legend.innerText = "Resultado do sorteio";
+  const showNumbers = document.createElement("div");
+  showNumbers.classList.add("show-numbers");
+  const delayIncrement = .5;
+  
+  for(let i = 0; i < sortedNumbers.length; i++) {
+    const item = document.createElement("div");
+    item.classList.add("item");
+    item.style.animationDelay = `${i * delayIncrement}s`;
+    const square = document.createElement("span");
+    square.classList.add("square");
+    square.style.animationDelay = `${i * delayIncrement}s`;
+    const number = document.createElement("p");
+    number.classList.add("number");
+    number.style.animationDelay = `${i * delayIncrement}s`;
+    number.textContent = sortedNumbers[i];
+    item.append(square, number)
+    showNumbers.append(item);
+  }
+
+  fieldset.append(legend, showNumbers);
+  form.append(fieldset);
 
   console.log(sortedNumbers);
 }

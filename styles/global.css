@@ -32,6 +32,7 @@
   --display-medium: 800 2.5rem / 130% var(--font-sora);
   --display-small: 700 2rem / 130% var(--font-sora);
   --overline: 700 1rem / 150% var(--font-roboto-mono);
+  --number: 700 4rem / 150% var(--font-roboto-mono);
   --paragraph-large: 500 1rem / 150% var(--font-roboto-flex);
   --paragraph-medium: 500 .875rem / 150% var(--font-roboto-flex);
   --paragraph-small: 500 .75rem / 150% var(--font-roboto-flex);
@@ -48,6 +49,7 @@ body {
   height: 100vh;
   font: var(--paragraph-large);
   color: var(--content-tertiary);
+  overflow-x: hidden;
 }
 
 .sr-only {

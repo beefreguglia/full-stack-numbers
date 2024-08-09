@@ -1,7 +1,6 @@
 main {
   display: grid;
-  max-width: 80rem;
-  margin-inline: auto;
+  grid-template-columns: 1fr;
   grid-template-areas: 
     'header'
     'form'
@@ -31,14 +30,18 @@ main {
   & p {
     font: var(--paragraph-medium);
   }
+
+  & > header {
+    grid-area: header;
+  }
 }
 
 @media (width >= 80em) {
   main {
-    padding: 2.75rem 8.375rem;
     display: grid;
     column-gap: 4rem;
-    grid-template-columns: 1fr 26rem;
+    padding: 0 8.375rem;  
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
       'header form'
       'doubts form';

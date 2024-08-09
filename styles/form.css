@@ -1,5 +1,11 @@
 form {
+  grid-area: form;
   margin-top: 2.5rem;
+
+  
+  &.center {
+    text-align: center;
+  }
   
   & > fieldset {
     border: none;
@@ -29,5 +35,115 @@ form {
       flex-direction: column;
     }
 
+    & .show-numbers {
+      margin-top: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    & .item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 6.25rem;
+      height: 6.25rem;
+      animation: scale .5s forwards, translate .5s forwards;
+    }
+    
+    & .square {
+      position: absolute;
+      width: 6.25rem;
+      height: 6.25rem;
+      aspect-ratio: 4 / 4;
+      border-radius: 1.75rem;
+      animation: background .5s linear forwards, rotate .5s linear forwards;
+    }
+
+    & .number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+      z-index: 1;
+      color: transparent;
+      font: var(--number);
+      animation: color .5s linear forwards;
+    }
   }
 }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  85% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes color {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+    color: var(--background-primary);
+  }
+  90% {
+    color: var(--background-primary);
+  }
+  100% {
+    color: var(--content-brand);
+  }
+}
+
+@keyframes background {
+  0% {
+    background: var(--background-primary);
+  }
+  10% {
+    background-color: var(--content-brand);
+  }
+  90% {
+    background-color: var(--content-brand);
+  }
+  100% {
+    background-color: var(--background-primary);
+  }
+}
+
+@keyframes scale {
+  0% {
+    scale: 0.6;
+  }
+  20% {
+    scale: 1.1;
+  }
+  80% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes translate {
+  0% {
+    transform: translateX(1.5rem);
+  }
+  90% {
+    transform: translateX(1.5rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
