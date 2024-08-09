@@ -16,6 +16,10 @@
       & > img[src*="arrow"] {
         animation: translate-right 2s backwards;
       }
+
+      & > img[src*="play"] {
+        animation: rotate-icon 1s forwards;
+      }
     }
   }
 }
@@ -96,5 +100,14 @@ button {
 @keyframes translate-right {
   50% {
     transform: translateX(.5rem);
+  }
+}
+
+@keyframes rotate-icon {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

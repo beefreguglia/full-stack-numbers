@@ -51,7 +51,7 @@ form {
       justify-content: center;
       width: 6.25rem;
       height: 6.25rem;
-      animation: scale .5s forwards, translate .5s forwards;
+      animation: scale 2s forwards, translate 2s forwards;
     }
     
     & .square {
@@ -60,7 +60,7 @@ form {
       height: 6.25rem;
       aspect-ratio: 4 / 4;
       border-radius: 1.75rem;
-      animation: background .5s linear forwards, rotate .5s linear forwards;
+      animation: background 2s linear forwards, rotate 2s linear forwards;
     }
 
     & .number {
@@ -72,7 +72,7 @@ form {
       z-index: 1;
       color: transparent;
       font: var(--number);
-      animation: color .5s linear forwards;
+      animation: color 2s linear forwards;
     }
   }
 }

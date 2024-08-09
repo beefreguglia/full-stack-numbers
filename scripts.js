@@ -3,6 +3,8 @@ const numbers = document.getElementById("numbers");
 const from = document.getElementById("from");
 const to = document.getElementById("to");
 const repeat = document.getElementById("repeat");
+const main = document.querySelector("main");
+const newForm = document.createElement("form");  
 
 numbers.oninput = () => {
   let value = numbers.value.replace(/\D/g, "");
@@ -33,15 +35,17 @@ form.onsubmit = (event) => {
   }
 
   handleSortNumbers(numbersValue, fromValue, toValue, sortedNumbers, repeatIsChecked);
-
-  form.innerHTML = "";
-  form.classList.add("center");
+  
+  form.remove();
+  main.append(newForm);
+  
+  newForm.classList.add("center");
   const fieldset = document.createElement("fieldset");
   const legend = document.createElement("legend");
   legend.innerText = "Resultado do sorteio";
   const showNumbers = document.createElement("div");
   showNumbers.classList.add("show-numbers");
-  const delayIncrement = .5;
+  const delayIncrement = 2;
   
   for(let i = 0; i < sortedNumbers.length; i++) {
     const item = document.createElement("div");
@@ -58,17 +62,26 @@ form.onsubmit = (event) => {
     showNumbers.append(item);
   }
 
-  fieldset.append(legend, showNumbers);
-  form.append(fieldset);
+  const repeatButtonBackground = document.createElement("div");
+  const repeatButton = document.createElement("button");
+  const playIcon = document.createElement("img");
+  playIcon.src = "./assets/icons/play.svg";
+  repeatButtonBackground.classList.add("btn");
+  repeatButton.textContent = 'Sortear novamente';
+  repeatButton.type = "button";
+  repeatButton.onclick = handleResetForm;
+  repeatButton.append(playIcon);
+  repeatButtonBackground.append(repeatButton);
 
-  console.log(sortedNumbers);
+  fieldset.append(legend, showNumbers, repeatButtonBackground);
+  newForm.append(fieldset);
 }
 
 function handleSortNumbers(numbers, from, to, sortedNumbers, repeatIsChecked) {
   while (sortedNumbers.length < numbers) {
-    let numero = getRandomInt(from, to);
-    if (repeatIsChecked || !sortedNumbers.includes(numero)) {
-      sortedNumbers.push(numero);
+    let number = getRandomInt(from, to);
+    if (repeatIsChecked || !sortedNumbers.includes(number)) {
+      sortedNumbers.push(number);
     }
   }
 }
@@ -78,3 +91,19 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Number(Math.floor(Math.random() * (max - min) + min));
 }
+
+function clearInputs() {
+  numbers.value = "";
+  from.value = "";
+  to.value = "";
+  repeat.checked = false;
+}
+
+function handleResetForm() {
+  clearInputs();
+  newForm.remove();
+  newForm.innerHTML = "";
+  main.append(form);
+}
+
+
