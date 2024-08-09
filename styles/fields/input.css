@@ -31,7 +31,7 @@ input {
 }
 
 input::placeholder {
-  color: var(--content-secondary);
+  color: var(--placeholder);
 }
 
 label {
